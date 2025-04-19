@@ -93,7 +93,7 @@ app.get("/demouser",async(req,res)=>{
 
 
 
-// Try to connect to DB  using the url MONGO_URL
+// Try to connect to DB  
 async function main(){
     await mongoose.connect(dbUrl);
 }
