@@ -1,6 +1,5 @@
 body{
-    /* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 200 to 800 */
+  
   font-family: "Plus Jakarta Sans", serif !important;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -107,5 +106,125 @@ body{
     padding-left: 0;
     padding-right: 0;
 }
+
+
+.cssCard{
+    margin-top: 7px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .listing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
+    body {
+      font-size: 14px;
+      padding: 10px;
+    }
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .listing-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  /* Medium devices (tablets) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    body {
+      font-size: 16px;
+      padding: 20px;
+    }
+    .listing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+  
+  /* Large devices (laptops and desktops) */
+  @media (min-width: 1025px) {
+    body {
+      font-size: 18px;
+      padding: 30px;
+    }
+    .listing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+  }
+
+
+
+
+  @media (max-width: 768px) {
+    .navbar-collapse {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  
+    .navbar-nav .nav-link {
+      color: white;
+      transition: all 0.3s ease;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+  
+
+  
+    .navbar-nav {
+      width: 100%;
+    }
+  
+    .nav-item {
+      text-align: center;
+      margin: 10px 0;
+    }
+  }
+
+
+
+
+
+
+
+
 
 
