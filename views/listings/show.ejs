@@ -62,24 +62,27 @@
       <hr>
       <% } %>
 
-      <% if(listing.reviews.length >0) { %>
-      <div class="row">
-        <p><b>All Reviews</b></p>
-      <% for(review of listing.reviews){ %>
-          <div class="card col-5 ms-3 mb-3">
-            <div class="card-body">
-              <h5 class="card-title">@<%=review.author.username%></h5>
-              <p class="starability-result card-text" data-rating="<%=review.rating%>"> </p>
-              <p class="card-textt"><%=review.comment%></p>
-
+      <% if(listing.reviews.length > 0) { %>
+        <div class="row">
+          <p><b>All Reviews</b></p>
+          <% for(review of listing.reviews){ %>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3  ">
+              <div class="card review-card h-100 outerCard ">
+                <div class="card-body cssCard">
+                  <h5 class="card-title">@<%= review.author.username %></h5>
+                
+                  <p class="starability-result card-text" data-rating="<%= review.rating %>"></p>
+                  <p class="card-text"><%= review.comment %></p>
+                </div>
+                <form class="mb-3 mt-2" action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE" method="post">
+                  <button class="btn btn-sm btn-dark cssCard">Delete</button>
+                </form>
+              </div>
             </div>
-            <form  class="mb-3 mt-2" action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE" method="post">
-              <button class="btn btn-sm btn-dark">Delete</button>
-            </form>
-          </div>
-        <% }%>
+          <% } %>
         </div>
-      <% }%>
+      <% } %>
+      
     </div> 
 </div>
 <br><br> 
